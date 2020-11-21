@@ -47,12 +47,12 @@ function validateForm() {
 
 // add-cart 
 
-var articles = document.querySelectorAll('.add-cart')
+var qte = document.querySelectorAll('.quantity')
 
 function calSum() {
     let sum = 180;
     for (var i = 0; i < articles.length - 1; i++) {
-        price = parseInt(articles[i].children[3].children[0].innerHTML)
+        price = parseInt(qte[i].children[0].innerHTML)
         sum += price
     }
 
@@ -61,9 +61,9 @@ function calSum() {
 
 calSum();
 
-for (var i = 0; i < articles.length - 1; i++) {
-    let qnt = articles[i].children[1];
-    let prx = articles[i].children[3].children[0];
+for (var i = 0; i < qte.length - 1; i++) {
+    let qnt = articles[i].children[0];
+    let prx = articles[i].children[1].children[0];
 
     articles[i].children[0].addEventListener('click', function () {
         if (parseInt(qnt.innerHTML) > 0) {
