@@ -51,7 +51,7 @@ var qte = document.querySelectorAll('.quantity')
 
 function calSum() {
     let sum = 180;
-    for (var i = 0; i < articles.length - 1; i++) {
+    for (var i = 0; i < qte.length - 1; i++) {
         price = parseInt(qte[i].children[0].innerHTML)
         sum += price
     }
@@ -62,20 +62,20 @@ function calSum() {
 calSum();
 
 for (var i = 0; i < qte.length - 1; i++) {
-    let qnt = articles[i].children[0];
-    let prx = articles[i].children[1].children[0];
+    let qnt = qte[i].children[0];
+    let prx = qte[i].children[1].children[0];
 
     articles[i].children[0].addEventListener('click', function () {
         if (parseInt(qnt.innerHTML) > 0) {
-            qnt.innerHTML = parseInt(qnt.innerHTML) - 1
-            prx.innerHTML = parseInt(qnt.innerHTML) * 180
+            qnt.innerHTML = parseInt(qte.innerHTML) - 1
+            prx.innerHTML = parseInt(qte.innerHTML) * 180
         }
         calSum();
     })
 
     articles[i].children[2].addEventListener('click', function () {
-        qnt.innerHTML = parseInt(qnt.innerHTML) + 1
-        prx.innerHTML = parseInt(qnt.innerHTML) * 180
+        qte.innerHTML = parseInt(qte.innerHTML) + 1
+        prx.innerHTML = parseInt(qte.innerHTML) * 180
         calSum();
     })
 
