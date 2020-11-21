@@ -198,35 +198,33 @@ a:hover {
 
 .add-cart {
   width: 80%;
-  margin: 40px ;
-  padding: 0% 30px;
+  margin: 40px;
   display: flex;
   align-items: center;
   font-size: 30px;
 }
 
-.add-cart button {
-  width: 30px;
-  height: 30px;
-  margin: 0% 10px;
+.add-cart .quantity {
+  width: 100px;
+  height: 50px;
   align-self: center;
   text-align: center;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .add-cart p {
-  margin-left: 150px;
-  margin: auto 0 auto 150px;
+  margin: auto 0% auto 50px;
+
   border: 5px solid black;
   background-color: white;
   font-weight: bold;
   height: auto;
-  width: 200px;
+  width: 150px;
   text-align: center;
 }
 
-.order{
-  text-align: center;
+.order {
+  text-align: start;
   width: 100%;
   font-size: 30px;
 }
