@@ -62,12 +62,12 @@ function calSum() {
 calSum();
 
 for (var i = 0; i < qte.length - 1; i++) {
-    let qnt = qte[i].children[0];
+    let qte = qte[i].children[0];
     let prx = qte[i].children[1].children[0];
 
     articles[i].children[0].addEventListener('click', function () {
         if (parseInt(qnt.innerHTML) > 0) {
-            qnt.innerHTML = parseInt(qte.innerHTML) - 1
+            qte.innerHTML = parseInt(qte.innerHTML) - 1
             prx.innerHTML = parseInt(qte.innerHTML) * 180
         }
         calSum();
